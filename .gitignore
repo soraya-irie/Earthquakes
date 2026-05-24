@@ -1,0 +1,29 @@
+# Xcode
+#
+# gitignore contributors: list on github
+
+## Build results
+build/
+DerivedData/
+
+## Xcode project-specific
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcscmblueprint
+*.xcuserstate
+
+## Swift Package Manager
+.swiftpm/xcode/xcuserdata/
+.swiftpm/xcode/workspace.state
+
+## OS X
+.DS_Store
