@@ -1,10 +1,3 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-A structure for representing quake data.
-*/
-
 import Foundation
 
 struct Quake {
@@ -17,4 +10,7 @@ struct Quake {
 
 extension Quake: Identifiable {
     var id: String { code }
+}
+
+extension Quake: Decodable {
 }
