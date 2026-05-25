@@ -13,4 +13,12 @@ extension Quake: Identifiable {
 }
 
 extension Quake: Decodable {
+
+    private enum CodingKeys: String, CodingKey {
+        case magnitude
+        case place
+        case time
+        case code
+        case detail
+    }
 }
