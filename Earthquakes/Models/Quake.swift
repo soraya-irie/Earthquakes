@@ -15,7 +15,7 @@ extension Quake: Identifiable {
 extension Quake: Decodable {
 
     private enum CodingKeys: String, CodingKey {
-        case magnitude
+        case magnitude = "mag"
         case place
         case time
         case code
