@@ -29,5 +29,13 @@ extension Quake: Decodable {
         let rawTime = try? values.decode(Date.self, forKey: .time)
         let rawCode = try? values.decode(String.self, forKey: .code)
         let rawDetail = try? values.decode(URL.self, forKey: .detail)
+
+        guard let magnitude = rawMagnitude,
+              let place = rawPlace,
+              let time = rawTime,
+              let code = rawCode,
+              let detail = rawDetail
+        else {
+        }
     }
 }
