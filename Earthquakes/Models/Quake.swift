@@ -23,5 +23,6 @@ extension Quake: Decodable {
     }
 
     init(from decoder: Decoder) throws {
+        let values = try docoder.container(keyedBy: CodingKeys.self)
     }
 }
