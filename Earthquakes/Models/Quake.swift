@@ -21,4 +21,7 @@ extension Quake: Decodable {
         case code
         case detail
     }
+
+    init(from decoder: Decoder) throws {
+    }
 }
