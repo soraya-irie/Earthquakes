@@ -23,6 +23,11 @@ extension Quake: Decodable {
     }
 
     init(from decoder: Decoder) throws {
-        let values = try docoder.container(keyedBy: CodingKeys.self)
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        let rawMagnitude = try? values.decode(Double.self, forKey: .magnitude)
+        let rawPlace = try? values.decode(String.self, forKey: .place)
+        let rawTime = try? values.decode(Date.self, forKey: .time)
+        let rawCode = try? values.decode(String.self, forKey: .code)
+        let rawDetail = try? values.decode(URL.self, forKey: .detail)
     }
 }
