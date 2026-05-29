@@ -36,6 +36,7 @@ extension Quake: Decodable {
               let code = rawCode,
               let detail = rawDetail
         else {
+            throw QuakeError.missingData
         }
     }
 }
