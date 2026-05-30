@@ -1,6 +1,7 @@
 import Foundation
 
 struct Quake {
+
     let magnitude: Double
     let place: String
     let time: Date
@@ -38,5 +39,11 @@ extension Quake: Decodable {
         else {
             throw QuakeError.missingData
         }
+
+        self.magnitude = magnitude
+        self.place = place
+        self.time = time
+        self.code = code
+        self.detail = detail
     }
 }
