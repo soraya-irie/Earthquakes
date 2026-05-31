@@ -26,6 +26,16 @@
 		AA77B6A92D8B913A00775D5C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		14316F7A2FCBE544009088F1 /* Exceptions for "Earthquakes" folder in "Earthquakes" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			platformFiltersByRelativePath = {
+				Models/GeoJSON.swift = (ios, );
+			};
+			target = AA77B6352D8B8DB300775D5C /* Earthquakes */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		14316F6A2FCBD4EE009088F1 /* EarthquakesTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -34,6 +44,9 @@
 		};
 		AA77B6382D8B8DB300775D5C /* Earthquakes */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				14316F7A2FCBE544009088F1 /* Exceptions for "Earthquakes" folder in "Earthquakes" target */,
+			);
 			path = Earthquakes;
 			sourceTree = "<group>";
 		};
