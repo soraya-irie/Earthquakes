@@ -11,5 +11,6 @@ struct EarthquakesTests {
 
         let expectedSeconds = TimeInterval(1636129710550 / 1000.0)
         let expectedTime = Date(timeIntervalSince1970: expectedSeconds)
+        #expect(quake.time == expectedTime)
     }
 }
