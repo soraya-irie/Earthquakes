@@ -4,4 +4,6 @@ import Testing
 
 struct EarthquakesTests {
 
+    @Test func geoJSONDecoderDecodesQuake() throws {
+    }
 }
