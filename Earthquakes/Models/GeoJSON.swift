@@ -1,6 +1,6 @@
 import Foundation
 
-struct GeoJSON {
+struct GeoJSON: Decodable {
 
     private enum RootCodingKeys: String, CodingKey {
         case features
