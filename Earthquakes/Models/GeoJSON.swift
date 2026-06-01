@@ -10,4 +10,8 @@ struct GeoJSON {
     }
 
     private(set) var quakes: [Quake] = []
+
+    init(from decoder: Decoder) throws {
+        let rootContainer = try decoder.container(keyedBy: RootCodingKeys.self)
+    }
 }
