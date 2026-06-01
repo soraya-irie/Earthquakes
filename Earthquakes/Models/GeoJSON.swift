@@ -14,5 +14,13 @@ struct GeoJSON {
     init(from decoder: Decoder) throws {
         let rootContainer = try decoder.container(keyedBy: RootCodingKeys.self)
         var featuresContainer = try rootContainer.nestedUnkeyedContainer(forKey: .features)
+
+        while !featuresContainer.isAtEnd {
+            let propertiesContainer = try featuresContainer.nestedContainer(keyedBy: FeatureCodingKeys.self)
+
+            if let properties = try? propertiesContainer.decode(Quake.self, forKey: .properties) {
+                quakes.append(properties)
+            }
+        }
     }
 }
