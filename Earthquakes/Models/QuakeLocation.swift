@@ -19,3 +19,10 @@ struct QuakeLocation: Decodable {
         var longitude: Double
     }
 }
+
+extension QuakeLocation.OriginProperties: Decodable {
+    private enum OriginPropertiesCodingKeys: String, CodingKey {
+        case latitude
+        case longitude
+    }
+}
