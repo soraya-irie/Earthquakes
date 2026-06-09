@@ -2,6 +2,12 @@ import Foundation
 
 struct QuakeClient {
 
+    var quakes: [Quake] {
+        get async throws {
+            fatalError("Unimplemented")
+        }
+    }
+
     private var decoder: JSONDecoder  = {
         let aDecoder = JSONDecoder()
         aDecoder.dateDecodingStrategy = .millisecondsSince1970
