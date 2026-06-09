@@ -4,7 +4,9 @@ struct QuakeClient {
 
     var quakes: [Quake] {
         get async throws {
-            fatalError("Unimplemented")
+            let data = try await downloader.httpData(from: feedURL)
+            let allQuakes = try decoder.decode(GeoJSON.self, from: data)
+            return allQuakes.quakes
         }
     }
 
