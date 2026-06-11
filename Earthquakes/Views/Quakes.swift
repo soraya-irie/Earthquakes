@@ -16,7 +16,7 @@ struct Quakes: View {
     var body: some View {
         NavigationView {
             List(selection: $selection) {
-                ForEach(quakes) { quake in
+                ForEach(provider.quakes) { quake in
                     QuakeRow(quake: quake)
                 }
                 .onDelete(perform: deleteQuakes)
@@ -43,11 +43,11 @@ extension Quakes {
     }
 
     func deleteQuakes(at offsets: IndexSet) {
-        quakes.remove(atOffsets: offsets)
+        provider.quakes.remove(atOffsets: offsets)
     }
     func deleteQuakes(for codes: Set<String>) {
         var offsetsToDelete: IndexSet = []
-        for (index, element) in quakes.enumerated() {
+        for (index, element) in provider.quakes.enumerated() {
             if codes.contains(element.code) {
                 offsetsToDelete.insert(index)
             }
