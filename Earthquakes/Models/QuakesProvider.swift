@@ -13,6 +13,10 @@ class QuakesProvider {
         self.quakes = latestQuakes
     }
 
+    func deleteQuakes(atOffsets offsets: IndexSet) {
+        quakes.remove(atOffsets: offsets)
+    }
+
     init(client: QuakeClient = QuakeClient()) {
         self.client = client
     }
