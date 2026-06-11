@@ -1,10 +1,3 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-The views of the app, which display details of the fetched earthquake data.
-*/
-
 import SwiftUI
 
 let staticData: [Quake] = [
@@ -24,7 +17,7 @@ struct Quakes: View {
     @AppStorage("lastUpdated")
     var lastUpdated = Date.distantFuture.timeIntervalSince1970
 
-    @State var quakes = staticData
+    @Environment(QuakesProvider.self) var provider
     @State var editMode: EditMode = .inactive
     @State var selectMode: SelectMode = .inactive
     @State var isLoading = false
