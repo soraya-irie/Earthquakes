@@ -33,5 +33,7 @@ struct EarthquakesTests {
     }
 
     @Test func clientDoesFetchEarthquakeData() async throws {
+        let downloader = TestDownloader()
+        let client = QuakeClient(downloader: downloader)
     }
 }
