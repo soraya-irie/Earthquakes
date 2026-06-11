@@ -30,6 +30,9 @@ struct Quakes: View {
             }
             .alert(isPresented: $hasError, error: error) {}
         }
+        .task {
+            await fetchQuakes()
+        }
     }
 }
 
