@@ -57,8 +57,13 @@ extension Quakes {
     }
     func fetchQuakes() async {
         isLoading = true
-        try await provider.fetchQuakes()
-        lastUpdated = Date().timeIntervalSince1970
+        do {
+            try await provider.fetchQuakes()
+            lastUpdated = Date().timeIntervalSince1970
+        } catch {
+            self.error = error as? QuakeError ?? .unexpectedError(error: error)
+            self.hasError = true
+        }
         isLoading = false
     }
 }
