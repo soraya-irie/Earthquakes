@@ -35,5 +35,7 @@ struct EarthquakesTests {
     @Test func clientDoesFetchEarthquakeData() async throws {
         let downloader = TestDownloader()
         let client = QuakeClient(downloader: downloader)
+        let quakes = try await client.quakes
+        #expect(quakes.count == 6)
     }
 }
