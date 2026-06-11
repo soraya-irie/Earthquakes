@@ -31,4 +31,7 @@ struct EarthquakesTests {
         let decoded = try JSONDecoder().decode(QuakeLocation.self, from: testDetail_hv72783692)
         #expect(decoded.latitude == 19.2189998626709)
     }
+
+    @Test func clientDoesFetchEarthquakeData() async throws {
+    }
 }
